@@ -1,0 +1,6 @@
+[submodule "RFQuiltLayout"]
+	path = RFQuiltLayout
+	url = https://github.com/moljac/RFQuiltLayout.git
+[submodule "rfquiltlayout-static-library-example"]
+	path = rfquiltlayout-static-library-example
+	url = https://moljac@bitbucket.org/ikii/rfquiltlayout-static-library-example.git
