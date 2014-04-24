@@ -3,12 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{35E9AF43-D328-46EE-91C2-1AFC60987BFC}</ProjectGuid>
     <ProjectTypeGuids>{F5B4F3BC-B597-4E2B-B552-EF5D8A32436F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>Xamarin.RFQuiltLayout.Binding</RootNamespace>
+    <RootNamespace>RFQuilt</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>Xamarin.RFQuiltLayout.Binding</AssemblyName>
   </PropertyGroup>
@@ -48,6 +46,10 @@
     <Compile Include="libRFQuiltLayout.linkwith.cs">
       <DependentUpon>libRFQuiltLayout.a</DependentUpon>
     </Compile>
+    <Compile Include="EmptyClass.cs" />
+    <Compile Include="native\libRFQuiltLayout.linkwith.cs">
+      <DependentUpon>libRFQuiltLayout.a</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ObjcBindingNativeLibrary Include="libRFQuiltLayout.a" />
@@ -55,6 +57,11 @@
   <ItemGroup>
     <None Include="ApiDefinition.cs" />
     <None Include="logs\binding.log" />
+    <None Include="native\RFQuiltLayout.h" />
+    <None Include="native\RFQuiltLayout.m" />
+    <None Include="native\libRFQuiltLayout.a" />
+    <None Include="native\RFQuilt.cs" />
+    <None Include="native\RFQuiltLayout.cs" />
   </ItemGroup>
   <ItemGroup>
     <ObjcBindingApiDefinition Include="RFQuiltLayout.cs" />

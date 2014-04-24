@@ -106,16 +106,21 @@
       <DependentUpon>RFViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="RFAppDelegate.cs" />
+    <Compile Include="aaa.cs" />
+    <Compile Include="aaa.designer.cs">
+      <DependentUpon>aaa.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <InterfaceDefinition Include="RFViewController_iPhone.xib" />
+    <InterfaceDefinition Include="RFViewController_iPad.xib" />
+    <InterfaceDefinition Include="aaa.xib" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Xamarin.RFQuiltLayout.Binding\Xamarin.RFQuiltLayout.Binding.csproj">
       <Project>{35E9AF43-D328-46EE-91C2-1AFC60987BFC}</Project>
       <Name>Xamarin.RFQuiltLayout.Binding</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <InterfaceDefinition Include="RFViewController_iPhone.xib" />
-    <InterfaceDefinition Include="RFViewController_iPad.xib" />
   </ItemGroup>
 </Project>

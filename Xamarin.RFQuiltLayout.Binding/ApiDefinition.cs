@@ -4,7 +4,7 @@ using MonoTouch.ObjCRuntime;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
-namespace Xamarin.RFQuiltLayout.Binding
+namespace RFQuilt 
 {
 	// The first step to creating a binding is to add your native library ("libNativeLibrary.a")
 	// to the project by right-clicking (or Control-clicking) the folder containing this source

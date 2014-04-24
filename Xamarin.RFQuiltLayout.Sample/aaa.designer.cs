@@ -9,28 +9,17 @@ using System.CodeDom.Compiler;
 
 namespace Xamarin.RFQuiltLayout.Sample
 {
-	[Register ("RFViewController")]
-	partial class RFViewController
+	[Register ("aaa")]
+	partial class aaa
 	{
 		[Outlet]
 		MonoTouch.UIKit.UICollectionView collectionView { get; set; }
-
-		[Outlet]
-		MonoTouch.UIKit.UISegmentedControl segmentedControl { get; set; }
-
-		[Action ("segmentedControlClick:")]
-		partial void segmentedControlClick (MonoTouch.UIKit.UISegmentedControl sender);
 		
 		void ReleaseDesignerOutlets ()
 		{
 			if (collectionView != null) {
 				collectionView.Dispose ();
 				collectionView = null;
-			}
-
-			if (segmentedControl != null) {
-				segmentedControl.Dispose ();
-				segmentedControl = null;
 			}
 		}
 	}

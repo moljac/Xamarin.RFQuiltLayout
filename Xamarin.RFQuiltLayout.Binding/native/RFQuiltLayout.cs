@@ -1,24 +1,10 @@
 using System.Drawing;
 using System;
 
-using MonoTouch.ObjCRuntime;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+namespace RFQuiltLayout {
 
-namespace RFQuilt 
-{
 	[Model]
-	// [BaseType (typeof (IUICollectionViewDelegate))] // base class
-	public partial interface RFQuiltLayoutDelegate 
-			: 
-			/*
-				UICollectionViewDelegate	 	// ObjectiveSharpie generated
-												// ./native/RFQuiltLayout.h
-				Error CS0527: 
-				Type `MonoTouch.UIKit.UICollectionViewDelegate' in interface list is not an interface (CS0527)				
-			 */
-			 IUICollectionViewDelegate			// shuts up compiler, but is this right?
-	{
+	public partial interface RFQuiltLayoutDelegate : UICollectionViewDelegate {
 
 		[Export ("BlockSizeForItemAtIndexPath")]
 		SizeF BlockSizeForItemAtIndexPath (NSIndexPath indexPath);

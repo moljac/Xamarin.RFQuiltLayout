@@ -2,14 +2,15 @@
 using System.Drawing;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using RFQuilt;
 
 namespace Xamarin.RFQuiltLayout.Sample
 {
-	public partial class RFViewController 
+	public partial class RFViewController
 		: 
 		// objective-c: UIViewController <RFQuiltLayoutDelegate>
 		//global::RFQuilt.RFQuiltLayoutDelegate
-		UIViewController
+	UIViewController , RFQuiltLayoutDelegate
 	{
 		static bool UserInterfaceIdiomIsPhone
 		{
@@ -38,6 +39,18 @@ namespace Xamarin.RFQuiltLayout.Sample
 			
 			// Perform any additional setup after loading the view, typically from a nib.
 		}
+		
+		#region - UICollectionView Delegate
+		public override void ItemSelected (UICollectionView collectionView, NSIndexPath indexPath)
+		{
+			
+			
+		}
+		
+		
+		
+		#endregion
+		
 	}
 }
 
