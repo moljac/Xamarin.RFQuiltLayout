@@ -8,8 +8,9 @@ using MonoTouch.UIKit;
 namespace RFQuilt 
 {
 	[Model]
+	[Protocol]
 	// [BaseType (typeof (IUICollectionViewDelegate))] // base class
-	public partial interface RFQuiltLayoutDelegate 
+	public partial interface IRFQuiltLayoutDelegate 
 			: 
 			/*
 				UICollectionViewDelegate	 	// ObjectiveSharpie generated
@@ -20,10 +21,10 @@ namespace RFQuilt
 			 IUICollectionViewDelegate			// shuts up compiler, but is this right?
 	{
 
-		[Export ("BlockSizeForItemAtIndexPath")]
+		[Export ("BlockSizeForItemAtIndexPath:")]
 		SizeF BlockSizeForItemAtIndexPath (NSIndexPath indexPath);
 
-		[Export ("InsetsForItemAtIndexPath")]
+		[Export ("InsetsForItemAtIndexPath:")]
 		UIEdgeInsets InsetsForItemAtIndexPath (NSIndexPath indexPath);
 	}
 
@@ -31,7 +32,13 @@ namespace RFQuilt
 	public partial interface RFQuiltLayout {
 
 		[Export ("delegate", ArgumentSemantic.Assign)]
-		NSObject Delegate { get; set; }
+		NSObject					// typed is better!   
+		//IRFQuiltLayoutDelegate  	// Better but cannot compile 
+			Delegate 
+			{ 
+				get; 
+				[NullAllowed] set; 
+			}
 
 		[Export ("blockPixels", ArgumentSemantic.Assign)]
 		SizeF BlockPixels { get; set; }

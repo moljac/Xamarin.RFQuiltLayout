@@ -2,6 +2,7 @@
 using System.Drawing;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+
 using RFQuilt;
 
 namespace Xamarin.RFQuiltLayout.Sample
@@ -10,7 +11,7 @@ namespace Xamarin.RFQuiltLayout.Sample
 		: 
 		// objective-c: UIViewController <RFQuiltLayoutDelegate>
 		//global::RFQuilt.RFQuiltLayoutDelegate
-	UIViewController , RFQuiltLayoutDelegate
+	UIViewController , IRFQuiltLayoutDelegate
 	{
 		static bool UserInterfaceIdiomIsPhone
 		{
